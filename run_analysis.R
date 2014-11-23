@@ -78,7 +78,7 @@ dots <- sapply(cols ,function(x) substitute(mean(x), list(x=as.name(x))))
 newdata<-do.call(summarise, c(list(.data=data), dots))
 
 #write the newdata to disk
-write.table(newdata,file=paste(dir,"/tidydata.csv",sep=""),row.name=FALSE)
+write.table(newdata,file=paste(dir,"/tidydata.txt",sep=""),row.name=FALSE)
 
 }
 
