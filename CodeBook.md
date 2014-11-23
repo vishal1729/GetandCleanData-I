@@ -1,5 +1,26 @@
 Tidy Data 
-========== 
+==========
+After Adding Two Columns acitivity and subject, column names are changed by issuing following commands
+
+* gsub("^t","time",names(data))
+* gsub("^f","fft",names(data))
+* gsub("Acc","accelerometer",names(data))
+* gsub("Gyro","gyroscope",names(data))
+* gsub("std","standarddeviation",names(data))
+* gsub("\\(\\)","",names(data))
+* tolower(names(data))
+
+These commands changes names of columns in following way.
+
+* t which represnt time domain is replaced by time
+* f which represnt FFT is replaced by fft
+* Acc is replaced by accelerometer
+* Gyro is replaced by gyroscope
+* std is replaced by gyroscope
+* () is removed from column names
+* all txt is converted in to lower case
+
+
  [1] "activity": 1 WALKING 2 WALKING_UPSTAIRS 3 WALKING_DOWNSTAIRS 4 SITTING 
                  5 STANDING 6 LAYING
                                          
